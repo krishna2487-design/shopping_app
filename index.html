@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUYIT</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        
+        .checkout-button {
+            display: inline-block;
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 15px 25px; 
+            text-align: center; 
+            text-decoration: none; 
+            font-size: 18px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s, transform 0.2s; 
+            margin: 20px auto; 
+            display: block; 
+            width: 200px; 
+        }
+
+        
+        .checkout-button:hover {
+            background-color: #45a049; 
+            transform: scale(1.05); 
+        }
+
+        /* Hover effect when button is active (clicked) */
+        .checkout-button:active {
+            background-color: #388e3c; /* Even darker green on active */
+        }
+
+        /* Center the entire page content */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+
+        main {
+            flex: 1; /* Allow the main content to expand */
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        /* Product Grid Styles */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05); /* Hover effect */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-right: 20px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar ul li a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">BUY-IT</div>
+        <div class="cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count">2</span> <!-- Cart item count -->
+        </div>
+    </header>
+
+    <!-- Category and Filters Section -->
+    <div class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Accessories</a></li>
+        </ul>
+
+        <h3>Filters</h3>
+        <ul>
+            <li><a href="#">Price: &#8377;100- &#8377;5000</a></li>
+            <li><a href="#">Brand: XYZ</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Section (Product Grid) -->
+    <main>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://i.pinimg.com/474x/44/21/56/4421568c46438f7a6045a50c7345248b.jpg" alt="New Trendy T-shirts">
+                <h4>T-Shirts</h4>
+                <p>Mens T-Shirts</p>
+                <p class="price">&#8377;300.00</p>
+                <button class="add-to-cart">Add to Cart</button><br><br>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://i.pinimg.com/474x/b0/e9/23/b0e92314ac9b6727293e836df0a9c02d.jpg" alt="Smartphones">
+                <h4>Smartphones</h4>
+                <p><b>New Arrivals!</b></p>
+                <p class="price">&#8377;10000-30000.00</p>
+                <button class="add-to-cart">Add to Cart</button><br><br>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://i.pinimg.com/474x/18/f6/ea/18f6ea6c64f03f943ea8a9ea16369377.jpg" alt="Shoes">
+                <h4>Shoes</h4>
+                <p>New Trendy Shoes</p>
+                <p class="price">&#8377;2500.00</p>
+                <button class="add-to-cart">Add to Cart</button><br><br>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://i.pinimg.com/474x/66/36/ea/6636ea336c0eba9eb2812aa84f0a92c9.jpg" alt="Watches">
+                <h4>Watches</h4>
+                <p>Mens accessories</p>
+                <p class="price">&#8377;500.00</p>
+                <button class="add-to-cart">Add to Cart</button><br><br>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/474x/22/b3/86/22b3862f252994f9d8f67a3b1d4b1ca5.jpg"alt="Shirts">
+                <h4> Shirts</h4>
+                <p>Full Sleeves Shirt</p>
+                <p class="price">&#8377;800.00</p>
+                <button class="add-to-cart">Add to Cart</button><br><br>
+                <button class="buy-now">Buy Now</button>
+
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/474x/96/36/ae/9636ae497e6d25634962b7288413eb2b.jpg" alt="Laptops">
+                <h4> Laptops</h4>
+                <p>New Launches!</p>
+                <p class="price">&#8377;50000.00</p>
+                <button class="add-to-cart">Add to Cart</button><br><br>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Checkout Link -->
+    <div class="checkout-link">
+        <a href="checkUout.html" class="checkout-button">Go to Checkout Page</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Make your shopping easy!</p>
+    </footer>
+</body>
+</html>

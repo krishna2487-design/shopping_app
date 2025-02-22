@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - BUYIT</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style for the "Go to Checkout" button */
+        .checkout-button {
+            display: inline-block;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 15px 25px; /* Padding for the button */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            font-size: 18px; /* Font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, transform 0.2s; /* Animation for hover effect */
+            margin: 20px auto; /* Margin for centering */
+            display: block; /* Ensures it behaves like a block-level element */
+            width: 200px; /* Set a fixed width */
+        }
+
+        /* Hover effect for the button */
+        .checkout-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+        }
+
+        /* Hover effect when button is active (clicked) */
+        .checkout-button:active {
+            background-color: #388e3c; /* Even darker green on active */
+        }
+
+        /* Center the entire page content */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+
+        main {
+            flex: 1; /* Allow the main content to expand */
+        }
+
+        .checkout-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .order-summary {
+            width: 48%;
+        }
+
+        .order-summary .order-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .shipping-form {
+            width: 48%;
+        }
+
+        .shipping-form input,
+        .shipping-form textarea,
+        .shipping-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .checkout-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .checkout-btn:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            margin-top: auto;
+        }
+
+        .index-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .index-link a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #4CAF50;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #4CAF50;
+        }
+
+        .index-link a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">BUY-IT</div>
+        <div class="cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count">0</span> <!-- Cart item count -->
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <main>
+        <h2>Checkout</h2>
+        <div class="checkout-container">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h3>Your Order</h3>
+                <div class="order-item">
+                    <p>Mens T-Shirts</p>
+                    <p>₹300.00</p>
+                </div>
+                <div class="order-item">
+                    <p>Smartphones</p>
+                    <p>₹20000.00</p>
+                </div>
+                <div class="order-item">
+                    <p>Shoes</p>
+                    <p>₹2500.00</p>
+                </div>
+                <div class="order-item">
+                    <p>Watches</p>
+                    <p>₹500.00</p>
+                </div>
+                <div class="order-item">
+                    <p>Shirts</p>
+                    <p>₹800</p>
+                </div>
+                <hr>
+                <div class="total">
+                    <p><b>Total: </b>₹24000.00</p>
+                </div>
+            </div>
+
+            <!-- Shipping Information Form -->
+            <div class="shipping-form">
+                <h3>Shipping Information</h3>
+                <form action="#" method="POST">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+
+                    <label for="address">Shipping Address</label>
+                    <textarea id="address" name="address" rows="4" placeholder="Enter your shipping address" required></textarea>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="9876543210" required>
+
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="debit-card">Debit Card</option>
+                        <option value="paypal">UPI</option>
+                        <option value="paypal">Cash On Delievery</option>
+                    </select>
+
+                    <button type="submit" class="checkout-btn">Proceed to Payment</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Link to go back to the main page -->
+    <div class="index-link">
+        <a href="index.html">Go to Main Page</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Make your shopping easy</p>
+    </footer>
+</body>
+</html>
